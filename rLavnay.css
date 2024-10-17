@@ -1,0 +1,416 @@
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #d5f799;
+            padding: 1em;
+        }
+
+        .logo {
+            width: 205px;
+            height: 95px;
+            padding-left: 12em;
+        }
+
+        .contacts {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+         .contacts1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button-Vxog {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        /* Кнопка Войти-Регистрация */
+        .register-button {
+            display: block;
+            width: ;
+            padding: 10px 20px;
+            margin: 10px auto;
+            text-align: center;
+            background-color: #d6f799;
+            border: 2px solid #000014;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.7s, color 0.7s;
+            font-weight: bold;
+        }
+
+        .register-button a {
+            text-decoration: none;
+            display: block;
+            color: #000;
+        }
+
+        .register-button:hover {
+            background-color: #fff;
+            color: black;
+        }
+
+
+        /* Стили для зеленого блока с картинками */
+        .green-block {
+            display: flex;
+            justify-content: center;
+            background-color: #8fb83e;
+            padding: 30px;
+        }
+
+        .image {
+            width: 400px;
+            height: 300px;
+            margin: 10px;
+        }
+
+        /* Стили для баннера рекламы */
+        .fon {
+            background-color: #97b632;
+            width: auto;
+            height: auto;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .banner {
+            background-color: #97b632;
+            width: 900px;
+            height: 300px;
+            margin: 0 auto;
+            padding: 3em 1em 3em 1em;
+            position: relative;
+        }
+
+        /* Стиль изображений в баннере  */
+        .banner img {
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+
+        /* Стиль стрелок в баннере */
+        .banner .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        .banner .arrow.left {
+            left: 0;
+            background-image: url("left.png");
+            /* Замените на свое изображение */
+            background-size: cover;
+        }
+
+        .banner .arrow.right {
+            right: 0;
+            background-image: url("right.png");
+         
+            background-size: cover;
+        }
+
+
+        /* Стили для главного меню */
+        .fon1 {
+            background-color: #D3D3D3;
+            width: auto;
+            height: auto;
+            margin: 0 auto;
+            position: relative;
+            font-size: 20px; 
+        }
+
+        #menu3,
+        #menu3 li {
+            margin: 0;
+            padding: 0;
+        }
+
+        #menu3 {
+            text-align: center;
+            background: #fff;
+        }
+
+        #menu3 li {
+            display: inline-block;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        #menu3 a {
+            display: block;
+            padding: 17px 3em 17px 3em;
+            color: #000;
+            text-decoration: none;
+        }
+
+        #menu3 a:hover {
+            background: #D3D3D3;
+            transition: background-color 0.7s;
+            text-decoration: none;
+        }
+
+        /* стили для выпадающего меню */
+        #menu3 .contacts-dropdown {
+            position: relative;
+        }
+
+        #menu3 .contacts-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #edf0f2;
+            min-width: 100px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        #menu3 .contacts-dropdown:hover .contacts-dropdown-content {
+            display: block;
+        }
+
+        #menu3 .contacts-dropdown-content a {
+            color: #000;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        #menu3 .contacts-dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* размер кнопки "каталог" */
+        #menu3 .contacts-dropdown a {
+            padding: 17px 3em 17px 3em;
+        }
+
+        /* активный стиль для кнопки "Главная" */
+        #menu3 .active {
+            background-color: #D3D3D3;
+            color: white;
+        }
+
+
+        /* Стили для заголовка и текста */
+        .arolovok1 {
+            width: auto;
+            height: auto;
+            background-color: #d6f799;
+            justify-content: center;
+
+        }
+
+ 
+  .header1 {
+    text-align: center; 
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    background-color: #4CAF50;
+    color: black;
+    padding: 5px 0px 0px 0px;
+    background-color: #d6f799;
+  }
+
+  .subheader1 {
+    text-align: center; 
+    margin: 20px auto; 
+    width: 60%; 
+    padding: 10px;
+    box-sizing: border-box; 
+    font-size: 24px;
+ 
+  }
+
+        /* Акции месяца */
+        .arolovok2 {
+            width: auto;
+            height: auto;
+        }
+
+        .title2 {
+            text-align: left;
+            font-size: 36px;
+            font-weight: bold;
+            margin: 20px 40px 0px 7em;
+        }
+
+        /* Стили для блоков товара */
+        .products {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            padding: 2em 10em 1em 10em;
+            background-color: #edf0f2;
+        }
+
+        .product {
+            width: 370px;
+            height: 435px;
+            border: 1px solid black;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 1em;
+            border-color: #fff;
+
+        }
+
+        .product-image {
+            width: 220px;
+            height: 220px;
+        }
+
+        .product-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        .product-description {
+            font-size: 16px;
+            margin: 2em;
+        }
+
+        .product-price {
+            font-size: 20px;
+            color: red;
+            margin: 5px;
+        }
+
+        .product-old-price {
+            font-size: 16px;
+            color: gray;
+            text-decoration: line-through;
+            margin: 5px;
+        }
+
+        .products2 {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            padding: 2em 10em 1em 10em;
+            background-color: #edf0f2;
+        }
+
+
+
+        /* Стили для раздела "О нас" */
+        .about {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 110px;
+            background-color: #8fb83e;
+        }
+
+        .about-image {
+            width: 550px;
+            height: 400px;
+            margin: 10px;
+        }
+
+        .about-text {
+            width: 600px;
+            font-size: 20px;
+            margin: 10px;
+        }
+
+        /* Стили для раздела "Преимущества" */
+        .benefits {
+            display: flex;
+            justify-content: space-around;
+            padding: 4em 17em 5em 17em;
+            text-align: center; 
+        }
+
+        .benefit {
+            width: 220px;
+            height: 220px;
+            border: 0px solid black;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .benefit-image {
+            width: 130px;
+            height: 130px;
+        }
+
+        .benefit-text {
+            font-size: 18px;
+            margin: 10px;
+        }
+
+        /* Стили для подвала сайта */
+        .footer {
+            width: auto;
+            height: 200px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .footer-logo {
+            width: 100px;
+            height: 100px;
+        }
+
+        .footer-menu {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-menu-item {
+            color: black;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .footer-text {
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .social-icons {
+
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+        }
+
+
+        .custom-gif {
+            width: 100px;
+            height: auto;
+            border: 1px solid #000;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
