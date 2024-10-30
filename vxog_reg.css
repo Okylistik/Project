@@ -1,0 +1,95 @@
+      .register-background {
+            height: 100vh;
+            background-color: #8fb83e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .register-container {
+            width: 400px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .register-logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            display: block;
+        }
+        .register-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0px 20px 0px;
+        }
+        .register-label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .register-input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 0px;
+            margin-bottom: 10px;
+        }
+        .register-button, .login-button {
+  display: block;
+  width: calc(100% - 40px); 
+  padding: 10px 20px; 
+  margin: 10px auto; 
+  text-align: center; 
+  background-color: white; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none; 
+  transition: background-color 0.7s, color 0.7s; 
+}
+      .register-button a {
+            text-decoration: none; 
+            display: block; 
+            color: white;
+        }      
+        
+        .login-button a {
+            text-decoration: none; 
+            display: block; 
+            color: white;
+        } 
+       
+.login-button {
+  background-color: white; 
+  color: black;
+}
+
+.login-button:hover {
+  background-color: #d6f799; 
+  color: black; 
+}
+        .register-button:hover{
+  background-color: white; 
+  color: white; 
+        }
+
+        .footer {
+            height: 120px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+        }
+
+
+        .footer-logo {
+            width: 90px;
+            height: 90px;
+            margin-left: 20px;
+        }
+
+        .footer-text {
+            margin-left: auto;
+            margin-right: 20px;
+        }
