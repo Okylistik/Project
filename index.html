@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MeZo</title>
+    <meta charset="utf-8">
+    <meta name="Keywords" content=""> 
+    <meta name="description" content="">
+    <link rel="stylesheet" href="rLavnay.css">
+    <link rel="icon" href="image_CauTa/logo2.png">
+    <style>
+        /* Стили для шапки сайта */
+        @font-face {
+            font-family: TildaSans-VF;
+            /* Имя шрифта */
+            src: url(fonts/TildaSans-VF.ttf);
+            /* Путь к файлу со шрифтом */
+        }
+
+        body {
+            margin: 0;
+            font-family: TildaSans-VF, sans-serif;
+            background-color: #edf0f2;
+        }
+        
+         /* Стили для сообщения */
+        .message {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-top-left-radius: 5px;
+            font-size: 14px;
+            display: none; /* Начальное состояние: скрыто */
+        }
+        
+        .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+        }
+        .overlay-content {
+          position: absolute;
+          top: 10%;
+          left: 10%;
+          background: #fff;
+          padding: 20px;
+          width: 80%;
+        }
+        .close-btn {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 1.5em;
+          cursor: pointer;
+        }   
+    </style>
+</head>
+<body>
+    <div class="message" id="mobileMessage">
+        Пожалуйста, включите режим просмотра<br> 
+        с ПК если вы зашли с телефона. 
+        <button onclick="closeMessage()">Закрыть</button>
+    </div>
+   
+    <!-- Шапка сайта -->
+    <div class="header">
+        <a href="index.html"><img src="image_CauTa/logo2.png" alt="Логотип" class="logo"></a>
+        <div class="contacts">
+            <font color="white" size="6">Интернет-магазин MeZo</font>
+        </div>
+        <div class="button-Vxog">
+            <button class="register-button" type="submit"><a href="vxog.php">Войти-Регистрация</a></button>
+        </div>
+    </div>
+
+    <!-- Зеленый блок с картинками -->
+    <div class="fon">
+        <div class="banner">
+            <img src="image_CauTa/banner7/ad1.jpg" alt="Реклама 1">
+            <img src="image_CauTa/banner7/ad2.jpg" alt="Реклама 2">
+            <img src="image_CauTa/banner7/ad3.jpg" alt="Реклама 3">
+            <div class="arrow left"></div>
+            <div class="arrow right"></div>
+        </div>
+    </div>
+    <!-- Главное меню -->
+    <div class="fon1">
+        <nav>
+            <ul id="menu3">
+                <li class="active"><a href="index.html">Главная</a></li>
+                <li><a href="#">Новости</a></li>
+                <li class="contacts-dropdown">
+                    <a href="KATAJlog.html">Каталог</a>
+                    <div class="contacts-dropdown-content">
+                        <a href="mat-plata.html">Материнские платы</a>
+                        <a href="#">Процессоры</a>
+                        <a href="#">Оперативная память</a>
+                        <a href="#">Видеокарты</a>
+                        <a href="#">SSD</a>
+                        <a href="#">HDD</a>
+                        <a href="#">Блоки питания</a>
+                        <a href="#">Перифирийные устройства</a>
+                    </div>
+                </li>
+                <li><a href="Error_404.html">Акции</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Заголовок и текст -->
+    <div class="arolovok1">
+        <div class="header1">
+            <h1>Интернет-магазин MeZo</h1>
+        </div>
+        <div class="subheader1">
+            <p>Данный сайт был создан для возможности преобретения необходимых ПК-комплектующих для всех желающих</p>
+        </div>
+    </div>
+
+    <div class="arolovok2">
+        <h5 class="title2">Успейте купить со скидкой</h5>
+    </div>
+    <!-- Блоки товара -->
+    <div class="overlay" id="overlay">
+        <div class="overlay-content">
+          <span class="close-btn" onclick="closeOverlay()">×</span>
+          <img id="overlay-image" src="" alt="">
+          <h3 id="overlay-title"></h3>
+          <p id="overlay-description"></p>
+        </div>
+    </div>
+   
+    <div class="products">
+        <div class="product" onclick="openOverlay('product1')">
+            <img src="image_CauTa/product/product1.png" alt="Товар 1" class="product-image">
+                <p class="product-name">Материнская плата</p>
+                <p class="product-description">Характеристики:<br>
+                Доп. плата GIGABYTE Bluetooth 4.0 и Wi-Fi;
+                Поддержка процессоров Intel® Core™ 4-поколения;
+                GIGABYTE On/Off Charge™ 2 для USB устройств;</p>
+                <p class="product-price">1000 ₽</p>
+                <p class="product-old-price">1500 ₽</p>
+        </div>
+        
+        <div class="product" onclick="openOverlay('product2')">
+            <img src="imag_CauTa/product/product2.png" alt="Товар 2" class="product-image">
+                <p class="product-name">Название</p>
+            <p class="product-description">Характеристики</p>
+            <p class="product-price">3000 ₽</p>
+            <p class="product-old-price">4000 ₽</p>
+        </div>
+        
+        <div class="product" onclick="openOverlay('product3')">
+            <img src="imag_CauTa/product/product3.png" alt="Товар 3" class="product-image">
+                <p class="product-name">Название</p>
+            <p class="product-description">Характеристики</p>
+            <p class="product-price">3</p>
+            <p class="product-old-price">4</p>
+        </div>
+    </div>
+    <!-- Блоки товара 2 второй ряд -->
+    <div class="products2">
+        <div class="product" onclick="openOverlay('product4')">
+            <img src="imag_CauTa/product/product4.png" alt="Товар 1" class="product-image">
+            <p class="product-name">Название</p>
+            <p class="product-description">Характеристики</p>
+            <p class="product-price">3</p>
+            <p class="product-old-price">4</p>
+        </div>
+        <div class="product" onclick="openOverlay('product5')">
+            <img src="imag_CauTa/product/product5.png" alt="Товар 2" class="product-image">
+            <p class="product-name">Название</p>
+            <p class="product-description">Характеристики</p>
+            <p class="product-price">3</p>
+            <p class="product-old-price">4</p>
+        </div> 
+        <div class="product" onclick="openOverlay('product6')">
+            <img src="imag_CauTa/product/product6.png" alt="Товар 3" class="product-image">
+            <p class="product-name">Название</p>
+            <p class="product-description">Характеристики</p>
+            <p class="product-price">3</p>
+            <p class="product-old-price">4</p>
+        </div>
+    </div>
+    <!-- Раздел "О нас" -->
+    <div class="about">
+        <img src="image_CauTa/about1.jpg" alt="О нас" class="about-image">
+        <div class="about-text">
+            <h1>О нас</h1>
+            <p><font size="6">Сайт принадлежит компании "MeZo"</font></p>
+        </div>
+    </div>
+    
+    <!-- Подвал сайта -->
+    <div class="footer">
+        <img src="image_CauTa/loogo.gif" alt="" class="custom-gif">
+        <ul class="footer-menu">
+            <li><a href="#" class="footer-menu-item">Главная</a></li>
+            <li><a href="KATAJlog.html" class="footer-menu-item">Каталог товаров</a></li>
+            <li><a href="Error_404.html" class="footer-menu-item">Акции</a></li>
+            <li><a href="#" class="footer-menu-item">Покупателям</a></li>
+            <li><a href="#" class="footer-menu-item">Сотрудничество</a></li>
+            <li><a href="#" class="footer-menu-item">Оплата и получение заказа</a></li>
+            <li><a href="#" class="footer-menu-item">О нас</a></li>
+            <li><a href="OT_TEX/OT3blB.php" class="footer-menu-item">Консультация</a></li>
+            <li><a href="OT_TEX/Tex.php" class="footer-menu-item">Техподдержка</a></li>
+        </ul>
+        <p class="footer-text">магазин - все права защищены</p>
+        <p>номер телефона: +7 (495) 123-45-67<br>
+                Справочная (495) 145-45-00<br>
+                Почта: <br>
+            Время работы: с 09:00 до 19:00
+        <ul class="social-icons">
+            <li><a href="#"><img src="vk.png" alt="Вконтакте" class="social-icon"></a></li>
+            <li><a href="#"><img src="telegram.png" alt="Телеграм" class="social-icon"></a></li>
+        </ul>
+    </div>
+<script>
+var productInfo = {
+  'product1': {
+    'image': '',
+    'title': '',
+    'description': 'капсулы 200 мг 10 шт'
+  },
+  'product2': {
+    'image': '',
+    'title': 'Кестин',
+    'description': 'таблетки покрыт.плен.об. 20 мг 10 шт'
+  }, 
+     'product3': {
+    'image': '',
+    'title': 'Омнефикс',
+    'description': 'Пластырь фиксирующий 10 м х 20 см, 1 шт'
+  }, 
+     'product4': {
+    'image': '',
+    'title': 'Микодерил',
+    'description': 'раствор для наружного применения 1 % 10 мл 1 шт'
+  }, 
+     'product5': {
+    'image': '',
+    'title': 'Новатенол',
+    'description': 'крем для наружного применения 5 % 25 г 1 шт'
+  }, 
+ 'product6': {
+    'image': '',
+    'title': 'Пантенорм',
+    'description': 'крем увлажняющий для сухой кожи - пантенол 6%, 50 мл 1 шт'
+  },  
+};
+    
+function openOverlay(productId) {
+  var overlay = document.getElementById('overlay');
+  var product = productInfo[productId];
+  document.getElementById('overlay-image').src = product.image;
+  document.getElementById('overlay-image').alt = product.title;
+  document.getElementById('overlay-title').textContent = product.title;
+  document.getElementById('overlay-description').textContent = product.description;
+  overlay.style.display = 'block';
+}
+function closeOverlay() {
+  document.getElementById('overlay').style.display = 'none';
+}
+</script>
+    
+     <script>
+        window.onload = function() {
+            const message = document.getElementById('mobileMessage');
+            message.style.display = 'block';
+            setTimeout(() => {
+                message.style.display = 'none';
+            }, 10000); 
+        };
+
+    
+        function closeMessage() {
+            const message = document.getElementById('mobileMessage');
+            message.style.display = 'none';
+        }
+    </script>
+    
+    <script>
+        var images = document.querySelectorAll(".banner img");
+        var leftArrow = document.querySelector(".banner .arrow.left");
+        var rightArrow = document.querySelector(".banner .arrow.right");
+        var currentIndex = 0;
+        function showImage(index) {
+            for (var i = 0; i < images.length; i++) {
+                images[i].style.display = "none";
+            }
+            images[index].style.display = "block";
+        }
+        function goLeft() {
+            currentIndex--;
+            if (currentIndex < 0) {
+                currentIndex = images.length - 1;
+            }
+            showImage(currentIndex);
+        }
+        function goRight() {
+            currentIndex++;
+            if (currentIndex >= images.length) {
+                currentIndex = 0;
+            }
+            showImage(currentIndex);
+        }
+        leftArrow.addEventListener("click", goLeft);
+        rightArrow.addEventListener("click", goRight);
+        showImage(currentIndex);
+        var timer;
+        function startTimer() {
+            timer = setInterval(goRight, 5000);
+        }
+        function stopTimer() {
+   
+            clearInterval(timer);
+        }
+        startTimer();
+        document.querySelector(".banner").addEventListener("mouseover", stopTimer);
+        document.querySelector(".banner").addEventListener("mouseout", startTimer);
+    </script>
+</body>
+</html>
