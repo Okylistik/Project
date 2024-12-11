@@ -29,6 +29,4 @@
 
 Ссылка: http://a1048544.xsph.ru/ (Сайт пока не доступен)
 
-<font size="3">
-    Hello GeeksforGees!
-</font>
+
